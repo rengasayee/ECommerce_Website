@@ -53,3 +53,50 @@ When,
     padding: 20px;
 }
 these were used, the problem resolved.
+
+Why when margin-bottom for .seventy is changed, the background color width changes for .main
+
+How to make prev and next buttons work in a circular way?
+
+Through this, it can be done.
+
+const content = [
+    `<p>Exclusive Product New Arrival</p>
+
+    <h2>Fit Low Carb</h2>
+    <h2>CANDY BAR</h2>
+
+    <p>Sugar-Free</p>
+    <br>
+    <p>BREAKFAST PRODUCTS ON SALE</p>
+    <br>
+    <h2>UP TO </h2>
+    <span class="seventy">70%</span>`,
+    `<p>Exclusive Product New Arrival</p>
+
+    <h2>Organic Coffee</h2>
+    <h2>SPECIAL BLEND</h2>
+
+    <p>Sugar-Free</p>
+    <br>
+    <p>BREAKFAST PRODUCTS ON SALE</p>
+    <br>
+    <h2>UP TO </h2>
+    <span class="fifty">50%</span>`
+];
+
+let currentIndex = 0;
+
+const prev = document.getElementsByClassName('prevbtn')[0];
+const next = document.getElementsByClassName('nextbtn')[0];
+const section = document.getElementsByClassName('sec1')[0];
+
+prev.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + content.length) % content.length;
+    section.innerHTML = content[currentIndex];
+});
+
+next.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % content.length;
+    section.innerHTML = content[currentIndex];
+});
