@@ -1,0 +1,55 @@
+header{
+    margin: -8px;
+    padding: 0px;
+
+}
+.header1{
+    background-color: black;
+    color: white;
+} 
+.lang{
+    display: inline-block;
+    margin-top: 50px;
+}
+.lang select{
+    width: 10em;
+    margin-left: 30px;
+}
+.lang option[value]{
+    font-size: 1.2em;
+    text-align: center;
+    color: darkblue;
+    background-color: rgb(133, 133, 29);
+}
+.header1 nav{
+    width: 700px;
+    margin: auto;
+    transform: translate(0%, -180%); 
+}
+.header1 nav li{
+    display: inline-block;
+}
+.header1 nav li a{
+    text-decoration: none;
+    margin: 20px;
+    color: white;
+}
+
+.logo{
+    width: 6%;
+    border-radius: 20px;
+    margin-left: 90%;
+    transform: translate(0%,-90%);
+} 
+
+The header1 background color extended beyond the content height.
+When,
+.header1 {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+these were used, the problem resolved.
